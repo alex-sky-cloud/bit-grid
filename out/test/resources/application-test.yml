@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.99.100:5432/grid_test_db
+  jpa:
+    open-in-view: false

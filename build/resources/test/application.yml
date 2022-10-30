@@ -1,0 +1,31 @@
+logging:
+  level:
+    grid:
+      bit: debug
+    org:
+      hibernate:
+        sql: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+      springframework:
+        data: TRACE
+        data.jpa: TRACE
+        jdbc:
+          core:
+            PreparedStatementCreator: TRACE
+            StatementCreatorUtils: TRACE
+    sql: debug
+
+spring:
+  datasource:
+    password: postgres
+    username: postgres
+    url: jdbc:postgresql://127.0.0.1:5432/grid_test_db
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.format_sql: true

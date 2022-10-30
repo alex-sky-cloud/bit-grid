@@ -1,0 +1,67 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.6.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+def compatibilityVersion = 11
+targetCompatibility = compatibilityVersion
+sourceCompatibility = compatibilityVersion
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    postgresqlJdbcVersion = '42.3.1'
+    flywayVersion = '8.3.0'
+    set('testcontainersVersion', "1.16.2")
+}
+
+// Feel free to add new dependencies in the section below
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    implementation 'org.flywaydb:flyway-core'
+
+    runtimeOnly "org.postgresql:postgresql:$postgresqlJdbcVersion"
+
+    compileOnly 'org.projectlombok:lombok'
+
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.testcontainers:junit-jupiter'
+    testImplementation 'org.testcontainers:postgresql'
+    testImplementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+
+
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    testImplementation "org.flywaydb:flyway-core:$flywayVersion"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.testcontainers:testcontainers-bom:${testcontainersVersion}"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+wrapper {
+    gradleVersion = '7.3.3'
+}

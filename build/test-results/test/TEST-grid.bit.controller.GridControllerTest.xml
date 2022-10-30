@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="grid.bit.controller.GridControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-01-21T16:23:52" hostname="CORN" time="0.83">
+  <properties/>
+  <testcase name="validateConstraintCellSizeColumnSizeAndPositiveForSaveOperation()" classname="grid.bit.controller.GridControllerTest" time="0.242"/>
+  <testcase name="validateOperationDeleteOnGrid()" classname="grid.bit.controller.GridControllerTest" time="0.022"/>
+  <testcase name="createNewGrid()" classname="grid.bit.controller.GridControllerTest" time="0.1"/>
+  <testcase name="validateConstraintNameColumnNotBlankAndLengthForSaveOperation()" classname="grid.bit.controller.GridControllerTest" time="0.135"/>
+  <testcase name="validateConstraintUpdateGridName()" classname="grid.bit.controller.GridControllerTest" time="0.041"/>
+  <testcase name="getCollectionOfGrid()" classname="grid.bit.controller.GridControllerTest" time="0.101"/>
+  <testcase name="updateChangesGridName()" classname="grid.bit.controller.GridControllerTest" time="0.109"/>
+  <testcase name="deleteGridAndItsData()" classname="grid.bit.controller.GridControllerTest" time="0.074"/>
+  <system-out><![CDATA[2022-01-21 19:23:52.098  INFO 334504 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [grid.bit.controller.GridControllerTest], using SpringBootContextLoader
+2022-01-21 19:23:52.099  INFO 334504 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [grid.bit.controller.GridControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-21 19:23:52.099  INFO 334504 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [grid.bit.controller.GridControllerTest]: GridControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-21 19:23:52.104  INFO 334504 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration grid.bit.Application for test class grid.bit.controller.GridControllerTest
+2022-01-21 19:23:52.107  INFO 334504 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-21 19:23:52.108  INFO 334504 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@16baf8d0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@217abcc9, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3123ac1a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7473cfe2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@354ed5c4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@41a6ab50, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6dc98c02, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7af4286, org.springframework.test.context.event.EventPublishingTestExecutionListener@448c4742, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@308498a8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@118cbb26, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6cca70e3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4a5a8c6f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5e8f0c54, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2aaed928]
+2022-01-21 19:23:52.394  INFO 334504 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1e1f467f testClass = GridControllerTest, testInstance = grid.bit.controller.GridControllerTest@22dddb13, testMethod = createNewGrid@GridControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3d268a2c testClass = GridControllerTest, locations = '{}', classes = '{class grid.bit.Application}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@c260bdc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@38be305c, [ImportsContextCustomizer@16ecdb6d key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5ddabb18, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@50eca7c6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44e3760b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4bf48f6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@39179470]; rollback [false]
+2022-01-21 19:23:52.423 TRACE 334504 --- [    Test worker] toryAnnotationTransactionAttributeSource : Adding transactional method 'org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAndFlush' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-01-21 19:23:52.425 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        grid
+        (cell_size, name) 
+    values
+        (?, ?)
+2022-01-21 19:23:52.426 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [100]
+2022-01-21 19:23:52.426 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [c4cedb18-8b78-46dd-8b8f-26d6e2c5a2dd]
+2022-01-21 19:23:52.432 DEBUG 334504 --- [    Test worker] grid.bit.service.grid.GridService        :  GridService.createGrid() : {} 11
+2022-01-21 19:23:52.437 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        grid0_.id as id1_0_,
+        grid0_.cell_size as cell_siz2_0_,
+        grid0_.name as name3_0_ 
+    from
+        grid grid0_ 
+    where
+        grid0_.name=? limit ?
+2022-01-21 19:23:52.438 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [c4cedb18-8b78-46dd-8b8f-26d6e2c5a2dd]
+2022-01-21 19:23:52.485  INFO 334504 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Committed transaction for test: [DefaultTestContext@1e1f467f testClass = GridControllerTest, testInstance = grid.bit.controller.GridControllerTest@22dddb13, testMethod = createNewGrid@GridControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3d268a2c testClass = GridControllerTest, locations = '{}', classes = '{class grid.bit.Application}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@c260bdc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@38be305c, [ImportsContextCustomizer@16ecdb6d key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5ddabb18, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@50eca7c6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44e3760b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4bf48f6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-01-21 19:23:52.683 TRACE 334504 --- [    Test worker] toryAnnotationTransactionAttributeSource : Adding transactional method 'org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-01-21 19:23:52.686 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        grid0_.id as id1_0_,
+        grid0_.cell_size as cell_siz2_0_,
+        grid0_.name as name3_0_ 
+    from
+        grid grid0_
+2022-01-21 19:23:52.700 DEBUG 334504 --- [    Test worker] grid.bit.service.grid.GridService        :  GridService.getAllGrid(): gridList is empty, {} false
+2022-01-21 19:23:52.700 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        columns0_.grid_id as grid_id3_2_0_,
+        columns0_.id as id1_2_0_,
+        columns0_.id as id1_2_1_,
+        columns0_.grid_id as grid_id3_2_1_,
+        columns0_.number as number2_2_1_ 
+    from
+        grid_column columns0_ 
+    where
+        columns0_.grid_id=? 
+    order by
+        columns0_.number
+2022-01-21 19:23:52.701 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055510]
+2022-01-21 19:23:52.712 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        rows0_.grid_id as grid_id3_3_0_,
+        rows0_.id as id1_3_0_,
+        rows0_.id as id1_3_1_,
+        rows0_.grid_id as grid_id3_3_1_,
+        rows0_.number as number2_3_1_ 
+    from
+        grid_row rows0_ 
+    where
+        rows0_.grid_id=? 
+    order by
+        rows0_.number
+2022-01-21 19:23:52.712 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055510]
+2022-01-21 19:23:52.715 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        columns0_.grid_id as grid_id3_2_0_,
+        columns0_.id as id1_2_0_,
+        columns0_.id as id1_2_1_,
+        columns0_.grid_id as grid_id3_2_1_,
+        columns0_.number as number2_2_1_ 
+    from
+        grid_column columns0_ 
+    where
+        columns0_.grid_id=? 
+    order by
+        columns0_.number
+2022-01-21 19:23:52.715 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055520]
+2022-01-21 19:23:52.717 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        rows0_.grid_id as grid_id3_3_0_,
+        rows0_.id as id1_3_0_,
+        rows0_.id as id1_3_1_,
+        rows0_.grid_id as grid_id3_3_1_,
+        rows0_.number as number2_3_1_ 
+    from
+        grid_row rows0_ 
+    where
+        rows0_.grid_id=? 
+    order by
+        rows0_.number
+2022-01-21 19:23:52.717 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055520]
+2022-01-21 19:23:52.767  INFO 334504 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1e1f467f testClass = GridControllerTest, testInstance = grid.bit.controller.GridControllerTest@22dddb13, testMethod = updateChangesGridName@GridControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3d268a2c testClass = GridControllerTest, locations = '{}', classes = '{class grid.bit.Application}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@c260bdc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@38be305c, [ImportsContextCustomizer@16ecdb6d key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5ddabb18, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@50eca7c6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44e3760b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4bf48f6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@39179470]; rollback [false]
+2022-01-21 19:23:52.834 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    UPDATE
+        grid 
+    set
+        name = ? 
+    where
+        id = ?
+2022-01-21 19:23:52.835 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Bar]
+2022-01-21 19:23:52.835 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [55500055510]
+2022-01-21 19:23:52.837 DEBUG 334504 --- [    Test worker] grid.bit.service.grid.GridService        :  GridService.updateName() : {} Bar
+2022-01-21 19:23:52.839 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        grid0_.id as id1_0_,
+        grid0_.cell_size as cell_siz2_0_,
+        grid0_.name as name3_0_ 
+    from
+        grid grid0_ 
+    where
+        grid0_.name=? limit ?
+2022-01-21 19:23:52.839 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Bar]
+2022-01-21 19:23:52.873  INFO 334504 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Committed transaction for test: [DefaultTestContext@1e1f467f testClass = GridControllerTest, testInstance = grid.bit.controller.GridControllerTest@22dddb13, testMethod = updateChangesGridName@GridControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3d268a2c testClass = GridControllerTest, locations = '{}', classes = '{class grid.bit.Application}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@c260bdc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@38be305c, [ImportsContextCustomizer@16ecdb6d key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5ddabb18, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@50eca7c6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44e3760b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4bf48f6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-01-21 19:23:52.876  INFO 334504 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1e1f467f testClass = GridControllerTest, testInstance = grid.bit.controller.GridControllerTest@22dddb13, testMethod = deleteGridAndItsData@GridControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3d268a2c testClass = GridControllerTest, locations = '{}', classes = '{class grid.bit.Application}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@c260bdc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@38be305c, [ImportsContextCustomizer@16ecdb6d key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5ddabb18, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@50eca7c6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44e3760b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4bf48f6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@39179470]; rollback [false]
+2022-01-21 19:23:52.888 TRACE 334504 --- [    Test worker] toryAnnotationTransactionAttributeSource : Adding transactional method 'org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-01-21 19:23:52.889 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        grid0_.id as id1_0_0_,
+        grid0_.cell_size as cell_siz2_0_0_,
+        grid0_.name as name3_0_0_ 
+    from
+        grid grid0_ 
+    where
+        grid0_.id=?
+2022-01-21 19:23:52.890 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055510]
+2022-01-21 19:23:52.893 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        columns0_.grid_id as grid_id3_2_0_,
+        columns0_.id as id1_2_0_,
+        columns0_.id as id1_2_1_,
+        columns0_.grid_id as grid_id3_2_1_,
+        columns0_.number as number2_2_1_ 
+    from
+        grid_column columns0_ 
+    where
+        columns0_.grid_id=? 
+    order by
+        columns0_.number
+2022-01-21 19:23:52.894 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055510]
+2022-01-21 19:23:52.901 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        rows0_.grid_id as grid_id3_3_0_,
+        rows0_.id as id1_3_0_,
+        rows0_.id as id1_3_1_,
+        rows0_.grid_id as grid_id3_3_1_,
+        rows0_.number as number2_3_1_ 
+    from
+        grid_row rows0_ 
+    where
+        rows0_.grid_id=? 
+    order by
+        rows0_.number
+2022-01-21 19:23:52.901 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055510]
+2022-01-21 19:23:52.904 DEBUG 334504 --- [    Test worker] grid.bit.service.grid.GridService        :  GridService.deleteGridById() : {} 55500055510
+2022-01-21 19:23:52.909 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        grid_column 
+    where
+        id=?
+2022-01-21 19:23:52.909 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055551]
+2022-01-21 19:23:52.911 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        grid_column 
+    where
+        id=?
+2022-01-21 19:23:52.911 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055552]
+2022-01-21 19:23:52.914 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        grid_row 
+    where
+        id=?
+2022-01-21 19:23:52.914 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055551]
+2022-01-21 19:23:52.916 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        grid 
+    where
+        id=?
+2022-01-21 19:23:52.916 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055510]
+2022-01-21 19:23:52.919 DEBUG 334504 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        grid0_.id as id1_0_0_,
+        grid0_.cell_size as cell_siz2_0_0_,
+        grid0_.name as name3_0_0_ 
+    from
+        grid grid0_ 
+    where
+        grid0_.id=?
+2022-01-21 19:23:52.919 TRACE 334504 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [55500055510]
+2022-01-21 19:23:52.946  INFO 334504 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Committed transaction for test: [DefaultTestContext@1e1f467f testClass = GridControllerTest, testInstance = grid.bit.controller.GridControllerTest@22dddb13, testMethod = deleteGridAndItsData@GridControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3d268a2c testClass = GridControllerTest, locations = '{}', classes = '{class grid.bit.Application}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@c260bdc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@38be305c, [ImportsContextCustomizer@16ecdb6d key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5ddabb18, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@50eca7c6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@44e3760b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4bf48f6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
